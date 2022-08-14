@@ -84,7 +84,7 @@ var htmlGenerated = '<!-- THIS FILE IS AUTO-GENERATED. PLEASE DONT ALTER IT MANU
 
 lineReader.on('line', function (line) {
   if (line.includes('div_sheet_')) {
-    const definition = line.replace('div_sheet_', '')
+    const definition = line.replace('div_sheet_', '').trim()
     const newLine = generateListHTML(`${definition}.json`.replaceAll('\t', ''))
     htmlGenerated += newLine + '\n'
   } else {
