@@ -35,7 +35,6 @@ h1 {
 
 h2 {
   margin: 10px 0px;
-
 }
 
 h3 {
@@ -77,12 +76,12 @@ p {
   float: left;
 }
 
-input[type=button], input[type=reset] {
+input[type='button'],
+input[type='reset'] {
   padding: 2px 1em;
 }
 
 #previewAnimationsBox {
-  margin-bottom: -64px;
 }
 
 #customizeChar {
@@ -105,7 +104,6 @@ input[type=button], input[type=reset] {
 }
 
 .instr {
-
 }
 
 #chooser p.instr {
@@ -122,40 +120,40 @@ ul {
   list-style-type: none;
 }
 
-
-#chooser>ul {
+#chooser > ul {
   border-left: solid 1px silver;
   padding-left: 0.5em;
   margin-left: 0.5em;
 }
 
-#chooser ul>li>span {
+#chooser ul > li > span {
   cursor: pointer;
 }
 
-#chooser ul>li>.condensed:after {
+#chooser ul > li > .condensed:after {
   padding-left: 10px;
   content: '\25B6';
 }
 
-#chooser ul>li>.expanded:after, #chooser .condensed:hover:after {
+#chooser ul > li > .expanded:after,
+#chooser .condensed:hover:after {
   padding-left: 10px;
-  content:  '\25BC';
+  content: '\25BC';
 }
 
-.condensed:hover, .expanded:hover {
+.condensed:hover,
+.expanded:hover {
   text-decoration: underline;
 }
-
 
 .search-result {
   background-color: yellow;
 }
 
-#chooser>ul ul {
+#chooser > ul ul {
   display: none;
   margin-left: 0.5em;
-  border-left:  solid 1px silver;
+  border-left: solid 1px silver;
   padding-left: 0.5em;
 }
 
@@ -184,9 +182,9 @@ li.hasPreview canvas {
 }
 
 #chooser.compact canvas {
-  display:  inline-block;
+  display: inline-block;
   width: 32px;
-  vertical-align:  middle;
+  vertical-align: middle;
 }
 
 #customizeChar .buttons {
@@ -198,7 +196,7 @@ li.hasPreview canvas {
   font-weight: bold;
 }
 
-label[for="displayMode-compact"] {
+label[for='displayMode-compact'] {
   display: inline-block;
 }
 
