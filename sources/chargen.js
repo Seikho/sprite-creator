@@ -638,8 +638,12 @@ $(document).ready(function () {
     setTimeout(nextFrame, 1000 / 8)
   }
 
+  const excludes = new Set('pregnant', 'child')
+
   const sheets = Array.from(document.querySelectorAll('input[type="radio"]')).reduce((prev, curr) => {
     const name = curr.id.slice(curr.name.length + 1)
+    if (excludes.has(name)) return prev
+
     if (!prev[curr.name]) prev[curr.name] = {}
     prev[curr.name][name] = curr
     return prev
