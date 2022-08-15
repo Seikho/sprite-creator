@@ -638,7 +638,7 @@ $(document).ready(function () {
     setTimeout(nextFrame, 1000 / 8)
   }
 
-  const excludes = new Set('pregnant', 'child')
+  const excludes = new Set(['pregnant', 'child'])
 
   const sheets = Array.from(document.querySelectorAll('input[type="radio"]')).reduce((prev, curr) => {
     const name = curr.id.slice(curr.name.length + 1)
@@ -649,15 +649,19 @@ $(document).ready(function () {
     return prev
   }, {})
 
+  window.sheets = sheets
+
   $('#randomize').click(function () {
+    const opts = {}
     for (const cate in sheets) {
       const options = Object.keys(sheets[cate])
       const rand = Math.floor(Math.random() * options.length)
       const item = options[rand]
       sheets[cate][item].checked = true
+      opts[cate] = item
     }
 
-    console.log('Done')
+    console.log(opts, 'Done')
 
     selectPossibleBodyType()
     setParams()
